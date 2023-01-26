@@ -18,6 +18,7 @@ import edu.wpi.first.wpilibj.SerialPort.Port;
 //imports differential drive class
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import java.lang.IllegalArgumentException;
 
 public class Drivebase extends SubsystemBase {
   /** Creates a new ExampleSubsystem. */
@@ -50,7 +51,7 @@ public class Drivebase extends SubsystemBase {
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
-    SmartDashboard.putData("Angle", m_AHRS.getAngle());
+    SmartDashboard.putNumber("Angle", m_AHRS.getAngle());
   }
 
   @Override
